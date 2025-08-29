@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет - Организатор мероприятий</title>
+    <link rel="stylesheet" href="lk_org_style.css">
+</head>
+<body>
+    <div class="container">
+        <main class="profile-card">
+            <h1 class="page-title">ЛИЧНЫЙ КАБИНЕТ</h1>
+            
+            <div class="organization-header">
+                <div class="logo-section">
+                    <span class="logo-label">ЛОГОТИП ОРГАНИЗАЦИИ:</span>
+                    <img src="gspb.png" alt="Герб Санкт-Петербурга" class="organization-logo">
+                </div>
+            </div>
+            
+            <div class="organization-info">
+                <div class="info-item">
+                    <span class="label">СТАТУС:</span>
+                    <span class="value">ОРГАНИЗАТОР МЕРОПРИЯТИЙ</span>
+                </div>
+                
+                <div class="info-item">
+                    <span class="label">ПОЛНОЕ НАЗВАНИЕ:</span>
+                    <span class="value">ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО «ЧЮГУН»</span>
+                </div>
+                
+                <div class="info-item">
+                    <span class="label">СОКРАЩЕННОЕ НАЗВАНИЕ:</span>
+                    <span class="value">ПАО ЧЮГУН</span>
+                </div>
+                
+                <div class="info-item">
+                    <span class="label">ОГРН:</span>
+                    <span class="value">1234567891123</span>
+                </div>
+                
+                <div class="info-item">
+                    <span class="label">ЮРИДИЧЕСКИЙ АДРЕС:</span>
+                    <span class="value">РОССИЯ, МОСКВА, ПЛ. КРАСНАЯ, Д. 1, 125110</span>
+                </div>
+                
+                <div class="info-item">
+                    <span class="label">ФАКТИЧЕСКИЙ АДРЕС:</span>
+                    <span class="value">РОССИЯ, МОСКВА, ПЛ. КРАСНАЯ, Д. 1, 125110</span>
+                </div>
+                
+                <div class="info-item">
+                    <span class="label">КОНТАКТНОЕ ЛИЦО ДЛЯ СВЯЗИ:</span>
+                    <span class="value">ИВАНОВ И. И.</span>
+                </div>
+                
+                <div class="info-item">
+                    <span class="label">ТЕЛЕФОН ДЛЯ СВЯЗИ:</span>
+                    <span class="value">+7 (999) 999-99-99</span>
+                </div>
+                
+                <div class="info-item">
+                    <span class="label">E-MAIL ДЛЯ СВЯЗИ:</span>
+                    <span class="value">CHUGUN@ONLINE.RU</span>
+                </div>
+                
+                <div class="info-item">
+                    <span class="label">САЙТ:</span>
+                    <span class="value">WWW.CHUGUN.RU</span>
+                </div>
+                
+                <div class="info-item">
+                    <span class="label">ОСНОВНЫЕ ВИДЫ ДЕЯТЕЛЬНОСТИ:</span>
+                    <span class="value">СОЗДАНИЕ ПРОЕКТОВ</span>
+                </div>
+            </div>
+            
+            <button class="btn-edit" onclick="editData()">
+                <img src="pen.png" alt="Редактировать" class="btn-icon">
+                ИЗМЕНИТЬ ДАННЫЕ
+            </button>
+            
+            <form class="documents-section" enctype="multipart/form-data">
+                <div class="document-item">
+                    <span class="document-label">СОГЛАСИЕ НА ОБРАБОТКУ <br> ПЕРСОНАЛЬНЫХ ДАННЫХ</span>
+                    <div class="file-upload-wrapper">
+                        <input type="file" id="personalDataFile" accept=".pdf" class="file-input" onchange="handleFileUpload('personalData', this)">
+                        <label for="personalDataFile" class="file-upload-btn" id="personalDataLabel">ПРИКРЕпить</label>
+                        <span class="file-name" id="personalDataFileName"></span>
+                    </div>
+                </div>
+                
+                <div class="document-item">
+                    <span class="document-label">КОПИИ УЧРЕДИТЕЛЬНЫХ <br> ДОКУМЕНТОВ</span>
+                    <div class="file-upload-wrapper">
+                        <input type="file" id="documentsFile" accept=".pdf" class="file-input" onchange="handleFileUpload('documents', this)">
+                        <label for="documentsFile" class="file-upload-btn" id="documentsLabel">ПРИКРЕПИТЬ</label>
+                        <span class="file-name" id="documentsFileName"></span>
+                    </div>
+                </div>
+            </form>
+            
+            <h2 class="events-title">АКТИВНЫЕ МЕРОПРИЯТИЯ</h2>
+            
+            <div class="events-list">
+                <a style="text-decoration: none" href="card.html">
+                    <div class="event-item">
+                        <div class="event-info">
+                            <h3 class="event-name">СУББОТНИК В ПАРКЕ 300-ЛЕТИЯ САНКТ-ПЕТЕРБУРГА</h3>
+                            <div class="event-details">
+                                <span class="event-location">СПБ, ПРИМОРСКИЙ ПР., 74</span>
+                                <span class="event-date">20 СЕНТЯБРЯ, 11:00</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a style="text-decoration: none" href="card.html">
+                    <div class="event-item">
+                        <div class="event-info">
+                            <h3 class="event-name">СУББОТНИК В ПАРКЕ ГОРЬКОГО</h3>
+                            <div class="event-details">
+                                <span class="event-location">МОСКВА, КРЫМСКИЙ ВАЛ УЛ., 9</span>
+                                <span class="event-date">27 СЕНТЯБРЯ, 11:00</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a style="text-decoration: none" href="card.html">
+                    <div class="event-item">
+                        <div class="event-info">
+                            <h3 class="event-name">СУББОТНИК В ПАРКЕ МАЯКОВСКОГО</h3>
+                            <div class="event-details">
+                                <span class="event-location">Екатеринбург, МИЧУРИНА УЛ., 230</span>
+                                <span class="event-date">4 ОКТЯБРЯ, 11:00</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <button class="btn-add-event" onclick="addEvent()">
+                ДОБАВИТЬ МЕРОПРИЯТИЕ
+            </button>
+            
+            <div class="statistics">
+                <p class="stats-text">РАБОТАЯ С НАМИ ВЫ ОРГАНИЗОВАЛИ</p>
+                <p class="stats-number">15 МЕРОПРИЯТИЙ,</p>
+                <p class="stats-text">НА КОТОРЫХ РАБОТАЛИ</p>
+                <p class="stats-number">134 ВОЛОНТЕРА</p>
+            </div>
+        </main>
+    </div>
+    
+    <script>
+        function editData() {
+            // Функционал редактирования данных
+        }
+        
+        function addEvent() {
+            // Функционал добавления мероприятия
+        }
+        
+        function handleFileUpload(type, input) {
+            const label = document.getElementById(type + 'Label');
+            const fileName = document.getElementById(type + 'FileName');
+            
+            if (input.files && input.files[0]) {
+                const file = input.files[0];
+                
+                // Проверяем, что файл PDF
+                if (file.type !== 'application/pdf') {
+                    alert('Пожалуйста, выберите PDF файл');
+                    input.value = '';
+                    return;
+                }
+                
+                // Обновляем интерфейс
+                label.textContent = 'ПРИКРЕПЛЕНО';
+                label.classList.remove('btn-attach');
+                label.classList.add('btn-attached');
+                fileName.textContent = file.name;
+            }
+        }
+    </script>
+</body>
+</html>

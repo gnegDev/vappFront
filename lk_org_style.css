@@ -1,0 +1,373 @@
+@font-face {
+    font-family: 'Colus-Regular';
+    src: url('Colus-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #9BF0E1;
+    font-family: 'Colus-Regular', Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    margin-top: 50px;
+}
+
+.profile-card {
+    background-color: #FF5E5B;
+    border-radius: 30px;
+    padding: 75px;
+    padding-right: 110px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.page-title {
+    color: #630B84;
+    font-size: 70px;
+    font-weight: bold;
+    text-align: start;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+
+.organization-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.logo-label {
+    color: #630B84;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.organization-logo {
+    height: 200px;
+    width: auto;
+}
+
+.organization-info {
+    margin-bottom: 25px;
+}
+
+.info-item {
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.label {
+    color: #630B84;
+    font-size: 25px;
+    display: inline;
+}
+
+.value {
+    color: #9BF0E1;
+    font-size: 25px;
+    margin-left: 5px;
+}
+
+.btn-edit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    max-width: 350px;
+    height: 70px;
+    background-color: #9BF0E1;
+    border: none;
+    border-radius: 30px;
+    color: #630B84;
+    font-family: 'Colus-Regular', Arial, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 0 auto 25px auto;
+    transition: all 0.3s ease;
+}
+
+.btn-edit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(99, 11, 132, 0.2);
+}
+
+.documents-section {
+    margin-bottom: 30px;
+}
+
+.document-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    gap: 15px;
+}
+
+.document-label {
+    color: #630B84;
+    font-size: 25px;
+    font-weight: bold;
+    flex: 1;
+}
+
+.file-upload-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.file-input {
+    display: none;
+}
+
+.file-upload-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 30px;
+    font-family: 'Colus-Regular', Arial, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 120px;
+    text-align: center;
+    align-items: center;
+    background-color: #9BF0E1;
+    color: #630B84;
+    display: flex;
+    width: 350px;
+    height: 70px;
+    align-items: center;
+    justify-content: center;
+}
+
+.file-upload-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 10px rgba(99, 11, 132, 0.2);
+}
+
+.file-upload-btn.btn-attached {
+    background-color: #9BF0E1;
+    color: #630B84;
+}
+
+.file-upload-btn.btn-attach {
+    background-color: #9BF0E1;
+    color: #630B84;
+}
+
+.file-name {
+    color: #630B84;
+    font-size: 15px;
+    font-weight: bold;
+    flex: 1;
+    word-break: break-word;
+}
+
+
+.events-title {
+    color: #630B84;
+    font-size: 55px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+    margin-top: 70px;
+}
+
+.events-list {
+    margin-bottom: 25px;
+}
+
+.event-item {
+    background-color: #9BF0E1;
+    border-radius: 30px;
+    padding: 30px;
+    margin-bottom: 25px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.event-item:hover {
+    border-color: #630B84;
+    transform: translateY(-2px);
+}
+
+.event-info {
+    width: 100%;
+}
+
+.event-name {
+    color: #630B84;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    line-height: 1.3;
+    max-width: 70%;
+}
+
+.event-details {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.event-location, .event-date {
+    color: #630B84;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.btn-add-event {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    max-width: 350px;
+    height: 70px;
+    background-color: #9BF0E1;
+    border: none;
+    border-radius: 30px;
+    color: #630B84;
+    font-family: 'Colus-Regular', Arial, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 0 auto 25px auto;
+    transition: all 0.3s ease;
+}
+
+.btn-add-event:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(99, 11, 132, 0.2);
+}
+
+.statistics {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.stats-text {
+    color: #630B84;
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    line-height: 1.2;
+}
+
+.stats-number {
+    color: #9BF0E1;
+    font-size: 55px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    line-height: 1;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .container {
+        max-width: 95%;
+    }
+    
+    .profile-card {
+        padding: 20px;
+    }
+    
+    .page-title {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    
+    .events-title {
+        font-size: 22px;
+    }
+    
+    .logo-section {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .document-item {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+    
+    .btn-attached, .btn-attach {
+        min-width: auto;
+    }
+    
+    .event-details {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .stats-number {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-title {
+        font-size: 20px;
+    }
+    
+    .events-title {
+        font-size: 18px;
+    }
+    
+    .event-item {
+        padding: 15px;
+    }
+    
+    .event-name {
+        font-size: 14px;
+    }
+    
+    .event-location, .event-date {
+        font-size: 12px;
+    }
+    
+    .stats-text {
+        font-size: 16px;
+    }
+    
+    .stats-number {
+        font-size: 24px;
+    }
+    
+    .info-item {
+        margin-bottom: 12px;
+    }
+    
+    .label, .value {
+        font-size: 13px;
+    }
+}

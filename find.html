@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поиск мероприятий - Чугун Онлайн</title>
+    <link rel="stylesheet" href="find_style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <img src="codenrock.png" alt="CodeNRock" class="logo">
+            <a href="lk_vol.html" class="profile-btn">
+                <img src="lk.png" alt="Личный кабинет" class="profile-icon">
+            </a>
+        </div>
+    </header>
+    
+    <main class="main-content">
+        <div class="intro-section">
+            <div class="intro-text">
+                <h1 class="main-title">ОТКРЫВАЙ ВОЗМОЖНОСТИ</h1>
+                <h2 class="secondary-title">СОЗДАВАЙ ПЕРЕМЕНЫ</h2>
+            </div>
+            
+            <div class="intro-description">
+                <p class="description-text">МЫ ПОДБИРАЕМ ДЛЯ ТЕБЯ ВОЛОНТЕРСКИЕ ПРОЕКТЫ В ФОРМАТЕ УДОБНЫХ КАРТОЧЕК</p>
+                <p class="description-text">ЕСЛИ СЧИТАЕШЬ, ЧТО МЕРОПРИЯТИЕ ТЕБЕ ПОДХОДИТ, СВАЙПАЙ ВПРАВО.<br>ОРГАНИЗАТОР ОБЯЗАТЕЛЬНО СВЯЖЕТСЯ С ТОБОЙ</p>
+                <p class="description-text filter-text">ЧТОБЫ МЫ ПОКАЗЫВАЛИ ТЕБЕ БОЛЬШЕ РЕЛЕВАНТНЫХ КАРТОЧЕК ОБЯЗАТЕЛЬНО <a href="#" class="filter-link">ПРИМЕНИ ФИЛЬТР</a></p>
+            </div>
+        </div>
+        
+        <div class="event-card">
+            <div class="event-header">
+                <h3 class="event-title">СУББОТНИК В ПАРКЕ<br>300-ЛЕТИЯ САНКТ-ПЕТЕРБУРГА</h3>
+            </div>
+            
+            <div class="event-content">
+                <div class="event-left">
+                    <div class="organizer-section">
+                        <h4 class="section-title">ОРГАНИЗАТОР</h4>
+                        <div class="organizer-content">
+                            <img src="gspb.png" alt="Герб СПб" class="organizer-logo">
+                        </div>
+                    </div>
+                    
+                    <div class="datetime-section">
+                        <h4 class="section-title">ДАТА И МЕСТО</h4>
+                        <div class="datetime-info">
+                            <p class="datetime">20 СЕНТЯБРЯ В 11:00</p>
+                            <p class="location">СПБ, ПРИМОРСКИЙ ПР., 74</p>
+                        </div>
+                    </div>
+                </div>
+                
+
+                <div class="event-left" style="width: 85%;">
+                    <div class="event-image">
+                        <img src="park.png" alt="Парк" class="park-image">
+                    </div>
+                    <div class="roles-section">
+                        <h4 class="section-title">ДОСТУПНЫЕ<br>РОЛИ</h4>
+                        <div class="roles-list">
+                            <div class="role-item" onclick="toggleRole(this)">
+                                <div class="role-radio"></div>
+                                <span class="role-text">ВОЛОНТЕР НА РЕГИСТРАЦИЮ</span>
+                            </div>
+                            <div class="role-item" onclick="toggleRole(this)">
+                                <div class="role-radio"></div>
+                                <span class="role-text">ПОМОЩЬ С ОБОРУДОВАНИЕМ</span>
+                            </div>
+                            <div class="role-item" onclick="toggleRole(this)">
+                                <div class="role-radio"></div>
+                                <span class="role-text">ПРОВЕДЕНИЕ МАСТЕР-КЛАССА</span>
+                            </div>
+                            <div class="role-item" onclick="toggleRole(this)">
+                                <div class="role-radio"></div>
+                                <span class="role-text">СУДЕЙСТВО ВЕСЕЛЫХ СТАРТОВ</span>
+                            </div>
+                            <div class="role-item" onclick="toggleRole(this)">
+                                <div class="role-radio"></div>
+                                <span class="role-text">ПОМОЩЬ С МГН</span>
+                            </div>
+                            <div class="role-item" onclick="toggleRole(this)">
+                                <div class="role-radio"></div>
+                                <span class="role-text">ПОМОЩЬ С РАЗДАЧЕЙ ЕДЫ</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="event-description">
+                <h4 class="section-title">ОПИСАНИЕ</h4>
+                <p class="description-text">ПРИГЛАШАЕМ ВОЛОНТЕРОВ НА СУББОТНИК В ПАРКЕ 300-ЛЕТИЯ САНКТ-ПЕТЕРБУРГА! В ПРОГРАММЕ МАСТЕР-КЛАССЫ НА РАЗЛИЧНУЮ ТЕМАТИКУ, УБОРКА МУСОРА, ВЫСАДКА ДЕРЕВЬЕВ, ПОКРАСКА СКАМЕЕК И МНОГОЕ ДРУГОЕ. ВСЕМ ВОЛОНТЕРАМ ГАРАНТИРОВАН ВКУСНЫЙ ГОРЯЧИЙ ОБЕД И ОПЛАТА 2000 РУБЛЕЙ ЗА ПОМОЩЬ В БЛАГОУСТРОЙСТВЕ СЕВЕРНОЙ СТОЛИЦЫ.</p>
+            </div>
+            
+
+        </div>
+        <div class="action-buttons">
+            <button class="reject-btn" onclick="rejectEvent()">
+                <img src="no.png" alt="Отклонить" class="action-icon">
+            </button>
+            <button class="accept-btn" onclick="acceptEvent()">
+                <img src="yes.png" alt="Принять" class="action-icon">
+            </button>
+        </div>
+    </main>
+    
+    <footer class="footer">
+        <div class="footer-content">
+            <h3 class="footer-title">ЧюГУН ОНЛАиН</h3>
+            <div class="footer-authors">
+                <p>ЦУКАНОВ КИРИЛЛ</p>
+                <p>ВАЛЬТУИЛьЕ ИВАН</p>
+            </div>
+            <button class="scroll-top-btn" onclick="scrollToTop()">
+                <img src="arrow.png" alt="Наверх" class="arrow-icon">
+            </button>
+        </div>
+    </footer>
+    
+    <div id="roleAlert" class="role-alert hidden">
+        <p>Выберите роль!</p>
+    </div>
+    
+    <script>
+        let selectedRole = null;
+        
+        function toggleRole(element) {
+            // Убираем выделение с других ролей
+            document.querySelectorAll('.role-item').forEach(item => {
+                item.classList.remove('selected');
+            });
+            
+            // Выделяем выбранную роль
+            element.classList.add('selected');
+            selectedRole = element;
+        }
+        
+        function acceptEvent() {
+            if (!selectedRole) {
+                showRoleAlert();
+                return;
+            }
+            // Функционал принятия мероприятия
+        }
+        
+        function rejectEvent() {
+            // Функционал отклонения мероприятия
+        }
+        
+        function showRoleAlert() {
+            const alert = document.getElementById('roleAlert');
+            alert.classList.remove('hidden');
+            setTimeout(() => {
+                alert.classList.add('hidden');
+            }, 3000);
+        }
+        
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</body>
+</html>

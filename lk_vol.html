@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет - Волонтер</title>
+    <link rel="stylesheet" href="lk_vol_style.css">
+</head>
+<body>
+    <div class="container">
+        <main class="profile-card">
+            <h1 class="page-title">ЛИЧНЫЙ КАБИНЕТ</h1>
+            
+            <div class="profile-section">
+                <div class="profile-info">
+                    <div class="info-item">
+                        <span class="label">СТАТУС:</span>
+                        <span class="value">УЧАСТНИК МЕРОПРИЯТИЙ</span>
+                    </div>
+                    
+                    <div class="info-item">
+                        <span class="label">ФИО:</span>
+                        <span class="value">ИВАНОВ ИВАН ИВАНОВИЧ</span>
+                    </div>
+                    
+                    <div class="info-item">
+                        <span class="label">ДАТА РОЖДЕНИЯ:</span>
+                        <span class="value">01.01.2000</span>
+                    </div>
+                    
+                    <div class="info-item">
+                        <span class="label">E-MAIL:</span>
+                        <span class="value">VANYA.IVANOV.00@INBOX.RU</span>
+                    </div>
+                    
+                    <div class="info-item">
+                        <span class="label">ПОЛ:</span>
+                        <span class="value">МУЖСКОЙ</span>
+                    </div>
+                    
+                    <div class="info-item" style="max-width: 300%;">
+                        <span class="label">О СЕБЕ:</span>
+                        <span class="value">СМЕШНОЙ, ХАРИЗМАТИЧНЫЙ, ОЧЕНЬ КЛАССНЫЙ. ЛЮБЛЮ КУШАТЬ, СПАТЬ И ПОМОГАТЬ.</span>
+                    </div>
+                </div>
+                
+                <div class="profile-photo">
+                    <img src="cat1.png" alt="Фото профиля" class="avatar">
+                </div>
+            </div>
+            
+            <div class="social-section">
+                <div class="social-links">
+                    <div class="social-item">
+                        <img src="tg.png" alt="Telegram" class="social-icon">
+                        <span class="social-handle">@IVAN</span>
+                    </div>
+                    
+                    <div class="social-item">
+                        <img src="vk.png" alt="VK" class="social-icon">
+                        <span class="social-handle">@IVAN</span>
+                    </div>
+                    
+                    <div class="social-item">
+                        <img src="inst.png" alt="Instagram" class="social-icon">
+                        <span class="social-handle">@IVAN</span>
+                    </div>
+                    
+                    <div class="social-item">
+                        <img src="ok.png" alt="Одноклассники" class="social-icon">
+                        <span class="social-handle">НЕ УКАЗАН</span>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="btn-edit" onclick="editData()">
+                <img src="pen.png" alt="Редактировать" class="btn-icon">
+                ИЗМЕНИТЬ ДАННЫЕ
+            </button>
+            <h2 class="badges-title">СОБРАННЫЕ НЯШКИ</h2>
+        </main>
+        
+        <section class="badges-section">
+            <div class="badges-carousel">
+                <button class="carousel-btn carousel-prev" onclick="previousBadge()">
+                    ❮
+                </button>
+                
+                <div class="badge-container">
+                    <img src="gekon.png" alt="Змееныш" class="badge-image">
+                    <div class="badge-item">
+                        <div class="badge-name">ЗМЕЕНЫШ</div>
+                        
+                        <div class="badge-description">
+                            <p>ЧЕШУЙЧАТЫЙ И ВЕРТЛЯВЫЙ СНАРУЖИ, НО МЯГКИЙ И ДОБРЫЙ ВНУТРИ</p>
+                            <p class="badge-safety">СОВСЕМ НЕ ОПАСНЫЙ</p>
+                            <p class="badge-trait">НЕ УКУСИТ В ОТЛИЧИЕ ОТ СВОИХ СОРОДИЧЕЙ УЖА И ГАДЮКИ</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="carousel-btn carousel-next" onclick="nextBadge()">
+                    ❯
+                </button>
+            </div>
+        </section>
+        
+        <section class="statistics-section">
+            <div class="stats-container">
+                <p class="stats-text">РАБОТАЯ С НАМИ, ВЫ ПОСЕТИЛИ</p>
+                <p class="stats-number">7 МЕРОПРИЯТИЙ</p>
+                <p class="stats-text">И РАБОТАЛИ СУММАРНО</p>
+                <p class="stats-number">34 ЧАСА</p>
+            </div>
+            
+            <a href="#" class="btn-search">ИСКАТЬ МЕРОПРИЯТИЕ</a>
+        </section>
+    </div>
+    
+    <script>
+        function editData() {
+            // Функционал редактирования данных
+        }
+        
+        function previousBadge() {
+            // Функционал предыдущей няшки
+        }
+        
+        function nextBadge() {
+            // Функционал следующей няшки
+        }
+    </script>
+</body>
+</html>

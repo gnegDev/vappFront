@@ -1,0 +1,200 @@
+@font-face {
+    font-family: 'Colus-Regular';
+    src: url('Colus-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #9BF0E1;
+    font-family: 'Colus-Regular', Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    padding: 20px;
+    border-radius: 100px;
+}
+
+.logo {
+    width: 180px;
+    border-radius: 30px;
+    margin-bottom: 20px;
+}
+
+.logo img {
+    width: 100%;
+    height: auto;
+}
+
+.registration-form {
+    background-color: #FF5E5B;
+    border-radius: 70px;
+    padding: 70px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.form-title {
+    color: #630B84;
+    font-size: 60px;
+    text-align: start;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-icon {
+    position: absolute;
+    left: 25px;
+    width: 30px;
+    height: 30px;
+    z-index: 1;
+}
+
+.form-input {
+    width: 600px;
+    height: 60px;
+    background-color: #9BF0E1;
+    border: none;
+    border-radius: 100px;
+    padding: 0 65px;
+    font-family: 'Colus-Regular', Arial, sans-serif;
+    font-size: 20px;
+    color: #630B84;
+    font-weight: bold;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.form-input::placeholder {
+    color: #630B84;
+}
+
+.form-input:focus {
+    box-shadow: 0 0 10px rgba(99, 11, 132, 0.3);
+    transform: translateY(-2px);
+}
+
+.button-group {
+    display: flex;
+    gap: 100px;
+    margin-top: 20px;
+}
+
+.btn {
+    flex: 1;
+    height: 70px;
+    border: none;
+    border-radius: 35px;
+    font-family: 'Colus-Regular', Arial, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    width: 200px;
+}
+
+.btn-register {
+    background-color: #630B84;
+    color: #9BF0E1;
+}
+
+.btn-register:hover {
+    background-color: #7a0d9f;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(99, 11, 132, 0.3);
+}
+
+.btn-home {
+    background-color: #630B84;
+    color: #9BF0E1;
+}
+
+.btn-home:hover {
+    background-color: #7a0d9f;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(99, 11, 132, 0.3);
+}
+
+.login-link {
+    text-align: start;
+    margin-top: 15px;
+    margin-left: 5px;
+}
+
+.login-text {
+    color: #630B84;
+    font-weight: bold;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 22px;
+}
+
+.login-text:hover {
+    color: #7a0d9f;
+    transform: translateY(-1px);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .container {
+        max-width: 90%;
+    }
+    
+    .registration-form {
+        padding: 30px 20px;
+    }
+    
+    .form-title {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+    
+    .button-group {
+        flex-direction: column;
+    }
+    
+    .btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .form-title {
+        font-size: 24px;
+    }
+    
+    .form-input {
+        font-size: 14px;
+        height: 45px;
+    }
+    
+    .btn {
+        font-size: 14px;
+        height: 45px;
+    }
+}
